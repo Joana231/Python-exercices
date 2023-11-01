@@ -1,0 +1,20 @@
+def case1():
+    return "Working day"
+def case2():
+    return "Weekend"
+def default_case():
+    return "Error"
+    
+day = input()
+
+cases = {
+    "Monday": case1,
+    "Tuesday": case1,
+    "Wednesday": case1,
+    "Thursday": case1,
+    "Friday": case1,
+    "Saturday": case2,
+    "Sunday": case2
+}
+result = cases.get(day, default_case)()
+print(result)

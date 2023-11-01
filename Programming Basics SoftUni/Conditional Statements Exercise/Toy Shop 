@@ -1,0 +1,31 @@
+trip_price = float(input())
+
+puzzle_count = int(input())
+puzzle_price = puzzle_count * 2.60
+
+doll_count = int(input())
+doll_price = doll_count * 3
+
+teddy_bear_count = int(input())
+teddy_bear_price = teddy_bear_count * 4.10
+
+minion_count = int(input())
+minion_price = minion_count * 8.20
+
+train_count = int(input())
+train_price = train_count * 2
+
+total_toy_count = puzzle_count + doll_count + teddy_bear_count + minion_count + train_count
+total_toy_price = puzzle_price + doll_price + teddy_bear_price + minion_price + train_price
+
+if total_toy_count >= 50:
+    total_toy_price -= total_toy_price * 0.25
+    
+total_toy_price -= total_toy_price * 0.1
+
+if total_toy_price >= trip_price:
+    left = total_toy_price - trip_price
+    print(f"Yes! %.2f lv left." % left)
+else:
+    needed = trip_price - total_toy_price
+    print(f"Not enough money! %.2f lv needed." % needed)

@@ -1,0 +1,61 @@
+fruit = input()
+week_day = input()
+count = float(input())
+
+price = 0
+
+if week_day == "Saturday" or week_day == "Sunday":
+    if fruit == "banana":
+        price = count * 2.70
+
+    elif fruit == "apple":
+        price = count * 1.25
+
+    elif fruit == "orange":
+        price = count * 0.90
+
+    elif fruit == "grapefruit":
+        price = count * 1.60
+
+    elif fruit == "kiwi":
+        price = count * 3.00
+
+    elif fruit == "pineapple":
+        price = count * 5.60
+
+    elif fruit == "grapes":
+        price = count * 4.20
+
+    else:
+        print("error")
+
+elif (week_day == "Monday" or week_day == "Tuesday") or (week_day == "Wednesday" or week_day == "Thursday") or week_day == "Friday":
+    if fruit == "banana":
+        price = count * 2.50
+
+    elif fruit == "apple":
+        price = count * 1.20
+
+    elif fruit == "orange":
+        price = count * 0.85
+
+    elif fruit == "grapefruit":
+        price = count * 1.45
+
+    elif fruit == "kiwi":
+        price = count * 2.70
+
+    elif fruit == "pineapple":
+        price = count * 5.50
+
+    elif fruit == "grapes":
+        price = count * 3.85
+
+    else:
+        print("error")
+
+else:
+    print("error")
+
+if price > 0.0:
+    print(f"{price:.2f}")

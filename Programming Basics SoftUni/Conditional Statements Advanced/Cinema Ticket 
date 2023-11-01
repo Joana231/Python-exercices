@@ -1,0 +1,20 @@
+def case1():
+    return "12"
+def case2():
+    return "14"
+def case3():
+    return "16"
+
+week_day = input()
+
+cases = {
+    "Monday": case1,
+    "Tuesday": case1,
+    "Friday": case1,
+    "Wednesday": case2,
+    "Thursday": case2,
+    "Saturday": case3,
+    "Sunday": case3
+}
+result = cases.get(week_day)()
+print(result)

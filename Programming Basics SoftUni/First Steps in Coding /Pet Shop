@@ -1,0 +1,7 @@
+dogfood = 2.50
+catfood = 4
+
+dogfood_count = int(input())
+catfood_count = int(input())
+
+print(f"{(dogfood * dogfood_count) + (catfood *catfood_count)} lv.")

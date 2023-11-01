@@ -1,0 +1,24 @@
+import math
+
+type = input()
+size = 0
+
+if type == "square":
+    side = float(input())
+    size = side * side
+	
+elif type == "rectangle":
+    side_one = float(input())
+    side_two = float(input())
+    size = side_one * side_two
+
+elif type == "circle":
+	rad = float(input())
+	size = math.pi * rad * rad
+
+else:
+    side_one = float(input())
+    side_two = float(input())
+    size = side_one * side_two / 2
+      
+print("%.3f" % size)

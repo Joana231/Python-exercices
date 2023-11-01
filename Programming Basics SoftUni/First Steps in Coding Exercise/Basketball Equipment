@@ -1,0 +1,10 @@
+yearly_payment = int(input())
+
+basketball_shoes = yearly_payment - (yearly_payment * (40/100))
+basketball_clothes = basketball_shoes - (basketball_shoes * (20/100))
+basketball_ball = basketball_clothes / 4
+basketball_more = basketball_ball / 5
+
+needed_money = yearly_payment + basketball_more + basketball_shoes + basketball_ball + basketball_clothes
+
+print(needed_money)

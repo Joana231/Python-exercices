@@ -1,0 +1,10 @@
+hour = int(input())
+week_day = input()
+
+if week_day == "Sunday":
+    print("closed")
+else:
+    if 10 <= hour <= 18:
+        print("open")
+    else:
+        print("closed")

@@ -1,0 +1,29 @@
+product = input()
+
+
+def case1():
+    return "fruit"
+
+
+def case2():
+    return "vegetable"
+
+
+def default_case():
+    return "unknown"
+
+cases = {
+    "banana": case1(),
+    "apple": case1(),
+    "kiwi": case1(),
+    "cherry": case1(),
+    "lemon": case1(),
+    "grapes": case1(),
+    "tomato": case2(),
+    "cucumber": case2(),
+    "pepper": case2(),
+    "carrot": case2(),
+}
+
+result = cases.get(product, default_case())
+print(result)

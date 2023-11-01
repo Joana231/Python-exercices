@@ -1,0 +1,7 @@
+deposit = float(input())
+due = int(input())
+percent = float(input()) / 100
+
+sum = deposit + due * ((deposit * percent) / 12)
+
+print(sum)

@@ -1,0 +1,31 @@
+def case1():
+    return "Monday"
+def case2():
+    return "Tuesday"
+def case3():
+    return "Wednesday"
+def case4():
+    return "Thursday"
+def case5():
+    return "Friday"
+def case6():
+    return "Saturday"
+def case7():
+    return "Sunday"
+def default_case():
+    return "Error"
+    
+number = int(input())
+
+cases = {
+    1: case1,
+    2: case2,
+    3: case3,
+    4: case4,
+    5: case5,
+    6: case6,
+    7: case7
+}
+
+result = cases.get(number, default_case)()
+print(result)

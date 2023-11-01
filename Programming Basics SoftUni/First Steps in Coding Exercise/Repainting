@@ -1,0 +1,21 @@
+protection = 1.50
+paint = 14.50
+add = 5.00
+
+additional_paint = 10 / 100
+additional_protection = 2
+bags = 0.40
+
+protection_space = int(input())
+paint_l = int(input())
+add_l = int(input())
+hours = int(input())
+
+sum_protection = (additional_protection + protection_space) * protection
+sum_paint = (paint * paint_l) + ((paint * paint_l) * additional_paint)
+sum_add = add * add_l
+price_per_hour = (sum_add + sum_paint + sum_protection + bags) * (30 / 100)
+
+sum = (price_per_hour * hours) + sum_paint + sum_protection + sum_add + bags
+
+print(sum)

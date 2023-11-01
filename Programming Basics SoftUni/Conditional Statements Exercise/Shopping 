@@ -1,0 +1,22 @@
+budget = float(input())
+
+graphics_card_count = int(input())
+graphics_card_price = graphics_card_count * 250
+
+processor_count = int(input())
+processor_price = processor_count * (graphics_card_price * 0.35)
+
+ram_count = int(input())
+ram_price = ram_count * (graphics_card_price * 0.1)
+
+total_price = graphics_card_price + processor_price + ram_price
+
+if graphics_card_count > processor_count:
+    total_price -= total_price * 0.15
+    
+if budget >= total_price:
+    left = budget - total_price
+    print(f"You have %.2f leva left!" % left)
+else:
+    needed = total_price - budget
+    print(f"Not enough money! You need %.2f leva more!" % needed)

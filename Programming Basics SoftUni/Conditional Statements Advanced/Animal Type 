@@ -1,0 +1,17 @@
+def case1():
+    return "mammal"
+def case2():
+    return "reptile"
+def default_case():
+    return "unknown"
+
+animal = input()
+
+cases = {
+    "dog" : case1,
+    "crocodile": case2,
+    "tortoise": case2,
+    "snake": case2,
+}
+result = cases.get(animal, default_case)()
+print(result)

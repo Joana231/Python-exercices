@@ -1,0 +1,16 @@
+import math
+
+first = int(input())
+second = int(input())
+third = int(input())
+minutes = 0
+
+score = first + second + third
+
+minutes = math.floor(score / 60)
+seconds = score % 60
+
+if seconds < 10:
+    print(f'{minutes}:0{seconds}')
+else:
+    print(f'{minutes}:{seconds}')

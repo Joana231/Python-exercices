@@ -1,0 +1,10 @@
+yard = float(input())
+
+cost = 7.61
+
+discount = 18 / 100
+
+dis = discount * (yard * cost)
+sum = (yard * cost) - dis
+print(f"The final price is: {sum} lv.")
+print(f"The discount is: {dis} lv.")
