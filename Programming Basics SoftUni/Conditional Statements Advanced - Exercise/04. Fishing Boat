@@ -1,0 +1,30 @@
+budget = int(input())
+season = input()
+fisherman_count = int(input())
+
+rent = 0
+
+if season == "Spring":
+    rent += 3000
+elif season == "Summer" or season == "Autumn":
+    rent += 4200
+else:
+    rent += 2600
+    
+if fisherman_count <= 6:
+    rent -= rent * 0.1
+elif 6 < fisherman_count <= 11:
+    rent -= rent * 0.15
+else:
+    rent -= rent * 0.25
+    
+if fisherman_count % 2 == 0:
+    if season != "Autumn":
+        rent -= rent * 0.05
+        
+if budget >= rent:
+    left = budget - rent
+    print(f"Yes! You have {left:.2f} leva left.")
+else:
+    needed = rent - budget
+    print(f"Not enough money! You need {needed:.2f} leva.")

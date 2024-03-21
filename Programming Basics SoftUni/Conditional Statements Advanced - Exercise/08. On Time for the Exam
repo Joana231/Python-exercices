@@ -1,0 +1,40 @@
+import math
+exam_hour = int(input())
+exam_minutes = int(input())
+arrive_hour = int(input())
+arrive_minutes = int(input())
+
+exam_time = (exam_hour * 60) + exam_minutes
+arrive_time = (arrive_hour * 60) + arrive_minutes
+result = exam_time - arrive_time
+
+if 0 <= result <= 30:
+    print("On time")
+    if result > 0:
+        print(f"{result} minutes before the start")
+
+elif result > 30:
+    print("Early")
+    if result >= 60:
+        hour_early = result / 60
+        minutes_early = result % 60
+        if minutes_early <= 9:
+            print(f"{math.floor(hour_early)}:0{minutes_early} hours before the start")
+        else:
+            print(f"{math.floor(hour_early)}:{minutes_early} hours before the start")
+
+    else:
+        print(f"{result} minutes before the start")
+
+else:
+    print("Late")
+    result = result * -1
+    if result >= 60:
+        hours_late = result / 60
+        minutes_late = result % 60
+        if minutes_late <= 9:
+            print(f"{math.floor(hours_late)}:0{minutes_late} hours after the start")
+        else:
+            print(f"{math.floor(hours_late)}:{minutes_late} hours after the start")
+    else:
+        print(f"{result} minutes after the start")

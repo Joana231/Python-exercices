@@ -1,0 +1,37 @@
+type = input()
+flowers_count = int(input())
+budget = int(input())
+
+needed_money = 0.0
+
+if type == "Roses":
+    needed_money = flowers_count * 5
+    if flowers_count > 80:
+        needed_money -= needed_money * 0.1
+    
+elif type == "Dahlias":
+    needed_money = flowers_count * 3.80
+    if flowers_count > 90:
+        needed_money -= needed_money * 0.15
+    
+elif type == "Tulips":
+    needed_money = flowers_count * 2.80
+    if flowers_count > 80:
+        needed_money -= needed_money * 0.15
+    
+elif type == "Narcissus":
+    needed_money = flowers_count * 3
+    if flowers_count < 120:
+        needed_money += needed_money * 0.15
+    
+else:
+    needed_money = flowers_count * 2.50
+    if flowers_count < 80:
+        needed_money += needed_money * 0.2
+    
+if budget >= needed_money:
+    left = budget - needed_money
+    print(f"Hey, you have a great garden with {flowers_count} {type} and {left:.2f} leva left.")
+else:
+    needed = needed_money - budget
+    print(f"Not enough money, you need {needed:.2f} leva more.")

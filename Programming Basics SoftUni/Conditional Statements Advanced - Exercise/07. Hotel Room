@@ -1,0 +1,28 @@
+month = str(input())
+days = int(input())
+studio = 0.0
+flat = 0.0
+
+if month == "May" or month == "October":
+    studio = days * 50
+    flat = days * 65
+    if 7 < days <= 14:
+        studio -= studio * 0.05
+    elif 14 < days:
+        studio -= studio * 0.30
+    
+elif month == "June" or month == "September":
+    studio = days * 75.20
+    flat = days * 68.70
+    if 14 < days:
+        studio -= studio * 0.20
+    
+else:
+    studio = days * 76
+    flat = days * 77
+    
+if 14 < days:
+    flat -= flat * 0.10
+    
+print(f"Apartment: {flat:.2f} lv.")
+print(f"Studio: {studio:.2f} lv.")
