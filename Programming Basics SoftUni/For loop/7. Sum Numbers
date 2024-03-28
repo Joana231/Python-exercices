@@ -1,0 +1,7 @@
+count = int(input())
+number = 0
+
+for i in range(0, count, 1):
+    number += int(input())
+
+print(number)
