@@ -1,0 +1,23 @@
+name = str(input())
+start_points = float(input())
+count = int(input())
+
+name_points = 0
+
+for i in range(0, count):
+    name_judge = str(input())
+    points_judge = float(input())
+
+    for char in name_judge:
+        name_points += 1
+
+    start_points += (name_points * points_judge) / 2
+
+    if start_points > 1250.5:
+        print(f"Congratulations, {name} got a nominee for leading role with {start_points:.1f}!")
+        break
+
+    name_points = 0
+
+if start_points < 1250.5:
+    print(f"Sorry, {name} you need {(1250.5 - start_points):.1f} more!")

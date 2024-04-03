@@ -1,0 +1,37 @@
+count = int(input())
+m1_count = 0
+m2_count = 0
+m3_count = 0
+m4_count = 0
+m5_count = 0
+
+for i in range(0, count):
+    people_count = int(input())
+
+    if people_count <= 5:
+        m1_count += people_count
+
+    elif 5 < people_count <= 12:
+        m2_count += people_count
+
+    elif 12 < people_count <= 25:
+        m3_count += people_count
+
+    elif 25 < people_count <= 40:
+        m4_count += people_count
+
+    else:
+        m5_count += people_count
+
+all_people = m1_count + m2_count + m3_count + m4_count + m5_count
+m1 = m1_count / all_people * 100
+m2 = m2_count / all_people * 100
+m3 = m3_count / all_people * 100
+m4 = m4_count / all_people * 100
+m5 = m5_count / all_people * 100
+
+print(f"{m1:.2f}%")
+print(f"{m2:.2f}%")
+print(f"{m3:.2f}%")
+print(f"{m4:.2f}%")
+print(f"{m5:.2f}%")

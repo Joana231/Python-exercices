@@ -1,0 +1,18 @@
+count = int(input())
+salary = int(input())
+
+for i in range(0, count):
+    name = str(input())
+
+    if name == "Facebook":
+        salary -= 150
+    elif name == "Instagram":
+        salary -= 100
+    elif name == "Reddit":
+        salary -= 50
+
+    if salary <= 0:
+        print("You have lost your salary.")
+        break
+if salary > 0:
+    print(f"{salary:.0f}")

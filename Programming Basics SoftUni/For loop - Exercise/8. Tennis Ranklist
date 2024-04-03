@@ -1,0 +1,26 @@
+import math
+tournaments = int(input())
+start_points = int(input())
+
+count_win = 0
+average_points = 0
+
+for i in range(0, tournaments):
+    state = str(input())
+
+    if state == "W":
+        start_points += 2000
+        count_win += 1
+        average_points += 2000
+
+    elif state == "F":
+        start_points += 1200
+        average_points += 1200
+
+    elif state == "SF":
+        start_points += 720
+        average_points += 720
+
+print(f"Final points: {math.floor(start_points)}")
+print(f"Average points: {math.floor(average_points / tournaments)}")
+print(f"{(count_win / tournaments * 100):.2f}%")

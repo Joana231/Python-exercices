@@ -1,0 +1,21 @@
+import sys
+
+count = int(input())
+sum_one = 0
+max_num = -sys.maxsize
+
+for i in range(0, count):
+    number = int(input())
+
+    if number > max_num:
+        max_num = number
+
+    sum_one += number
+
+sum_others = sum_one - max_num
+
+if max_num == sum_others:
+    print("Yes" + "\n" + f"Sum = {sum_others}")
+
+else:
+    print("No" + "\n" + f"Diff = {abs(max_num - sum_others)}")
